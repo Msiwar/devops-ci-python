@@ -1,0 +1,31 @@
+yyname: Continuous Integration
+
+on:
+  push:
+    branches:
+      - main    # Déclenche le workflow lors d'un push sur la branche 'main'
+  pull_request:
+    branches:
+      - main    # Déclenche le workflow lors de la création d'une pull request vers 'main'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Utilise un environnement Ubuntu
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2  # Vérifie le code source depuis ton dépôt
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'  # Utilise Python 3.9 (tu peux ajuster selon ta version)
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt  # Installe les dépendances de ton projet
+
+    - name: Run tests
+      run: |
+        pytest tests  # Exécute tes tests avec pytest
