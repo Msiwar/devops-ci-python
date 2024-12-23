@@ -1,2 +1,1 @@
-requests
-numpy
+pytest==7.0.1
