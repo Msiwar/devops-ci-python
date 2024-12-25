@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 yyname: Continuous Integration
+=======
+name: Continuous Integration
+>>>>>>> f24f90c2dcd8777712d5544936abda2bed2eb9c8
 
 on:
   push:

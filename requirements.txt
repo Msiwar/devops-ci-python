@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 pytest
 requests
+=======
+pytest==7.0.1
+>>>>>>> f24f90c2dcd8777712d5544936abda2bed2eb9c8
